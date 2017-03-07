@@ -9,17 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var NAME: UILabel!
+   
+    var tapCount = 0
+   
+    @IBAction func clickbutton(_ sender: UIButton)        {
+        
+        tapCount = tapCount + 1
+    
+        if tapCount >= 5 {
+            NAME.text = "that's enough now"
+        }
+        if tapCount >= 20 {
+            NAME.text = "you're kidding me!!"
+        }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 
 }
-
+    
+    
+}
