@@ -4,29 +4,24 @@
 //
 //  Created by David Madacsi on 2/28/17.
 //  Copyright © 2017 David Madacsi. All rights reserved.
-//
+//  this is some test text for git and source tree
 
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var NAME: UILabel!
-   
-    var tapCount = 0
-   
-    @IBAction func clickbutton(_ sender: UIButton)        {
-        
-        tapCount = tapCount + 1
+
+     @IBOutlet weak var LABEL: UILabel!
     
-        if tapCount >= 5 {
-            NAME.text = "that's enough now"
-        }
-        if tapCount >= 20 {
-            NAME.text = "you're kidding me!!"
-        }
+   
+    
+    @IBOutlet weak var text1: UITextField!
+       
 
+    @IBOutlet weak var text2: UITextField!
 
+    @IBAction func clickbutton(_ sender: AnyObject) {
+    
+  LABEL.text = "Answer is...\(Double(text1.text!)! + Double(text2.text!)!)"
 
 }
-    
-    
 }
